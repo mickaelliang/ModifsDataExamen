@@ -1,37 +1,647 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/mickaelliang/ModifsDataExamen/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mickaelliang/ModifsDataExamen/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+````json
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Adresse",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Adresse using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ville",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Ville using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Nom",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Nom using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Identifiant",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Identifiant using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix Gazole",
+    "expression": "grel:value +\"00\"[0,5-value.length()]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Prix Gazole using expression grel:value +\"00\"[0,5-value.length()]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP95",
+    "expression": "grel:value +\"000\"[0,5-value.length()]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Prix SP95 using expression grel:value +\"000\"[0,5-value.length()]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP98",
+    "expression": "grel:value +\"000\"[0,5-value.length()]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Prix SP98 using expression grel:value +\"000\"[0,5-value.length()]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix GPLc",
+    "expression": "grel:value +\"000\"[0,5-value.length()]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Prix GPLc using expression grel:value +\"000\"[0,5-value.length()]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix E10",
+    "expression": "grel:value +\"000\"[0,5-value.length()]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Prix E10 using expression grel:value +\"000\"[0,5-value.length()]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix E85",
+    "expression": "grel:value +\"000\"[0,5-value.length()]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Prix E85 using expression grel:value +\"000\"[0,5-value.length()]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix E85",
+    "expression": "grel:value +\"000\"[0,5-value.length()]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Prix E85 using expression grel:value +\"000\"[0,5-value.length()]"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix Gazole",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.5590000000000002"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.559"
+      }
+    ],
+    "description": "Mass edit cells in column Prix Gazole"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix Gazole",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.3820000000000001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.382"
+      }
+    ],
+    "description": "Mass edit cells in column Prix Gazole"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix Gazole",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.496999999999999"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.497"
+      }
+    ],
+    "description": "Mass edit cells in column Prix Gazole"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix Gazole",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.593999999999999"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.594"
+      }
+    ],
+    "description": "Mass edit cells in column Prix Gazole"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix Gazole",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.5190000000000001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.519"
+      }
+    ],
+    "description": "Mass edit cells in column Prix Gazole"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP95",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.488999999999999"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.489"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP95"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP95",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.5070000000000001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.507"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP95"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP95",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.5390000000000001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.539"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP95"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP95",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.5590000000000002"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.559"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP95"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP95",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.609999999999999"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.610"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP95"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP95",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.6600000000000001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.660"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP95"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP98",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.4889999999999999"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.489"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP98"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP98",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.5390000000000001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.539"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP98"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP98",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.5899999999999999"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.590"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP98"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP98",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.597999999999999"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.598"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP98"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP98",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.609999999999999"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.610"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP98"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP98",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.6440000000000001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.644"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP98"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP98",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.6840000000000002"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.684"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP98"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix SP98",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.6880000000000002"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.688"
+      }
+    ],
+    "description": "Mass edit cells in column Prix SP98"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix GPLc",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "0.9490000000000001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0.949"
+      }
+    ],
+    "description": "Mass edit cells in column Prix GPLc"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix GPLc",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "0.9500000000000001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0.950"
+      }
+    ],
+    "description": "Mass edit cells in column Prix GPLc"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix E10",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.5590000000000002"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.559"
+      }
+    ],
+    "description": "Mass edit cells in column Prix E10"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix E10",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.5899999999999999"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.590"
+      }
+    ],
+    "description": "Mass edit cells in column Prix E10"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix E10",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1.597999999999999"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1.598"
+      }
+    ],
+    "description": "Mass edit cells in column Prix E10"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Prix E85",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "0.6990000000000001"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0.699"
+      }
+    ],
+    "description": "Mass edit cells in column Prix E85"
+  }
+]
+````
