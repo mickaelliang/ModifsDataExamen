@@ -1,3 +1,5 @@
+# Modifications apportées
+## Premier jeu de données 
 ````json
 [
   {
@@ -642,6 +644,61 @@
       }
     ],
     "description": "Mass edit cells in column Prix E85"
+  }
+]
+````
+
+## Second jeu de données 
+````json
+[
+  {
+    "op": "core/recon",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ville",
+    "config": {
+      "mode": "standard-service",
+      "service": "https://wdreconcile.toolforge.org/en/api",
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "type": {
+        "id": "Q484170",
+        "name": "commune of France"
+      },
+      "autoMatch": true,
+      "columnDetails": [],
+      "limit": 0
+    },
+    "description": "Reconcile cells in column Ville to type Q484170"
+  },
+  {
+    "op": "core/extend-reconciled-data",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Ville",
+    "endpoint": "https://wdreconcile.toolforge.org/en/api",
+    "identifierSpace": "http://www.wikidata.org/entity/",
+    "schemaSpace": "http://www.wikidata.org/prop/direct/",
+    "extension": {
+      "properties": [
+        {
+          "id": "P1082",
+          "name": null
+        }
+      ]
+    },
+    "columnInsertIndex": 5,
+    "description": "Extend data at index 5 based on column Ville"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "population",
+    "newColumnName": "Population",
+    "description": "Rename column population to Population"
   }
 ]
 ````
